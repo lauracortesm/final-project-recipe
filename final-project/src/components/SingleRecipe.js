@@ -1,11 +1,51 @@
 import {Link} from "react-router-dom"
 import React from "react"
  
-
-const apiKey = "a5c4732f-dafe-408e-84f7-e956dddc5b26"
+const apiKey = "14a8d176a5c51e6c3d76ac22f20630b3"
+const apiID = "719a90f4"
 
 class SingleRecipe extends React.Component{
     state = {
+        activeRecipe: []
+    }
+    
+    componentDidMount = async () => {
+        const title = this.props.location.state.recipe;
+        const request = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${title}
+        &app_id=${apiID}&app_key=${apiKey}`)
+        const respond = await request.json()
+        console.log(respond)
+        this.setState({activeRecipe: respond.hits[0]})
+        console.log(this.state.activeRecipe.recipe.image)
+    }
+    
+    render(){
+        const recipe = this.state.activeRecipe
+        console.log(recipe)
+
+    
+        return (
+            <div>
+                <image src={recipe.recipe} alt=" "/>
+                        
+                 <button>
+                     <Link to="/">
+                               Go Home
+                    </Link>
+                </button>
+               
+
+                
+                
+            </div>
+        );
+    }
+}
+export default SingleRecipe;
+
+
+/*
+state = {
         activeRecipe: []
     }
     
@@ -41,5 +81,4 @@ class SingleRecipe extends React.Component{
             </div>
         );
     }
-}
-export default SingleRecipe;
+*/

@@ -1,8 +1,9 @@
-import React, {Component} from 'react'
+/*import React, {Component} from 'react'
 import Form from "./components/Form"
 import Recipes from "./components/Recipes"
 import './App.css'
-const apiKey = "a5c4732f-dafe-408e-84f7-e956dddc5b26";
+const apiKey = "14a8d176a5c51e6c3d76ac22f20630b3"
+const apiID = "719a90f4"
 
 class App extends Component {
   state = {
@@ -14,6 +15,9 @@ class App extends Component {
     e.preventDefault();
     const apiCall = await fetch (`https://forkify-api.herokuapp.com/api/v2/recipes?search=${recipeName}=
     ${apiKey}`);
+    //const apiCall = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${recipeName}
+    //&app_id=${apiID}&app_key=${apiKey}`);
+    
     const data = await apiCall.json();
     this.setState ({recipes: data.data.recipes});
   }
@@ -41,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/

@@ -1,0 +1,37 @@
+.Recipes-main-container{
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.Recipes-single-section{
+    margin: 5px;
+    display: block;
+    text-align: center;
+    box-shadow: 3px 3px 10px #afb6c6;
+}
+
+.Recipes-image{
+    border-radius: 20%;
+}
+
+.Recipes-heading-3{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.Recipes-view-button{
+    background-color: #282C34;
+    color: white;
+    border: none;
+    margin-left: 1rem;
+    border-radius: 0.3em;
+}
+
+.Recipes-view-button:hover{
+    background-color: #5d626b;
+
+}
