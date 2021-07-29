@@ -7,8 +7,25 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  background-color: white;
-  color: #282C34;
+  background: #e16259;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 150px;
+  height: 35px;
   border: none;
-  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  
+  margin-left: 10px;
+}
+.Form-Input{
+  text-align: center;
+  height: 1.8rem;;
+  border: none;
+}
+
+.Form-Button:hover{
+  background-color: #5d626b;
+
 }

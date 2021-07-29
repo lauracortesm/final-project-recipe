@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Form from "./Form"
 import Recipes from "./Recipes"
-import "../App.css"
+import "../TestApi.css"
 
 const apiKey = "14a8d176a5c51e6c3d76ac22f20630b3"
 const apiID = "719a90f4"
@@ -21,28 +21,33 @@ class TestApi extends Component {
     //console.log(this.state.recipes)
   }
   
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes")
+    const recipes = JSON.parse(json)
+    this.setState({ recipes })
+  }
+
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes)
+    localStorage.setItem("recipes", recipes)
+  }
 
   render(){
     return (
         <div className="App">
           <header className="App-header">
-            <h1>Recipe Search</h1>
+            <h1>are you hungry? <span className="App-heading-part-2">find somenthing to cook</span></h1>
             
             <Form getRecipe={this.getRecipe}/>
             
           </header>
-          <Recipes recipes={this.state.recipes}/>
-          
+          <body>
+            <p></p>
+            <Recipes recipes={this.state.recipes}/>
+
+          </body>
+
         </div>
-       /* <div className="App">
-          <header className="App-header">
-            <h1>Recipe Search</h1>
-            <Form getRecipe={this.getRecipe}/>
-          </header>
-          <Recipes recipes={this.state.recipes}/>
-          
-          
-        </div>*/
       );
   }
 }

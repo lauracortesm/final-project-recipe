@@ -9,7 +9,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  text-transform: capitalize;
+  background-color: #1F4273;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+}
+.App-header h1{
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.App-heading-part-2{
+  font-size: 1.9rem;
 
 }
 

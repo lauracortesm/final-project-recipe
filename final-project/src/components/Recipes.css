@@ -1,9 +1,10 @@
 .Recipes-main-container{
-    margin: auto;
+    width: auto;
+    margin-top: 20px;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
 }
 
 .Recipes-single-section{
@@ -13,8 +14,13 @@
     box-shadow: 3px 3px 10px #afb6c6;
 }
 
+.Recipes-headind-2{
+    font-size: 18px;
+    width: full;
+}
+
 .Recipes-image{
-    border-radius: 20%;
+    width: 350px;
 }
 
 .Recipes-heading-3{
@@ -24,13 +30,24 @@
 }
 
 .Recipes-view-button{
-    background-color: #282C34;
-    color: white;
-    border: none;
-    margin-left: 1rem;
-    border-radius: 0.3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  background: #e16259;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 150px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-
+.Recipes-view-button a{
+    text-decoration: none;
+    color: white;
+}
 .Recipes-view-button:hover{
     background-color: #5d626b;
 

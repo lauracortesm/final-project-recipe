@@ -1,0 +1,69 @@
+.SingleRecipe-header {
+    text-transform: capitalize;
+    background-color: white;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #1F4273;
+    box-shadow: 3px 3px 10px #afb6c6;
+  
+  }
+
+.SingleRecipe-header h1{
+    display: flex;
+    flex-direction: column;
+  }
+
+.SimpleRecipe-heading-part-2{
+      font-size: 1.8rem;
+  }
+
+.SimpleRecipe-single-section{
+    margin: 3rem;
+    display: block;
+    text-align: center;
+    
+}
+
+.SimpleRecipe-headind-2{
+    font-size: 18px;
+    width: full;
+}
+
+.SimpleRecipe-image{
+    width: 350px;
+}
+
+.SimpleRecipe-heading-3{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.SimpleRecipe-view-button{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  background: #e16259;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 150px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.SimpleRecipe-view-button a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+.SimpleRecipe-view-button:hover{
+    background-color: #5d626b;
+
+}

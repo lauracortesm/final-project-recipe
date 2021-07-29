@@ -1,3 +1,4 @@
+import './SingleRecipe.css';
 import {Link} from "react-router-dom"
 import React from "react"
  
@@ -15,70 +16,41 @@ class SingleRecipe extends React.Component{
         &app_id=${apiID}&app_key=${apiKey}`)
         const respond = await request.json()
         console.log(respond)
-        this.setState({activeRecipe: respond.hits[0]})
-        console.log(this.state.activeRecipe.recipe.image)
+        this.setState({activeRecipe: respond.hits[0].recipe})
+        console.log((this.state.activeRecipe))
     }
     
     render(){
         const recipe = this.state.activeRecipe
-        console.log(recipe)
-
-    
-        return (
+        
+        console.log(recipe.ingredientsLines)
+        return (  
+           
             <div>
-                <image src={recipe.recipe} alt=" "/>
+                <header className="SingleRecipe-header">
+                <h1>yummyy!! <span className="SimpleRecipe-heading-part-2">it looks so tasty...</span></h1>
+                        <button className="SimpleRecipe-view-button">
+                            <Link to="/">go home</Link>
+                        </button>
+                </header>
+                <body>
+                    <main className="SimpleRecipe-single-section">
                         
-                 <button>
-                     <Link to="/">
-                               Go Home
-                    </Link>
-                </button>
-               
+                        <h2>{recipe.label}</h2>
+                        <img src={recipe.image} alt={recipe.label}/>
+                        <h3 className ="SimpleRecipe-heading-3">delicious recipe from: {recipe.source}</h3>
+                        <p>Preparation Time: {recipe.totalTime}</p>
+                        <button className="SimpleRecipe-view-button"><a href={recipe.url} target="_blank">view full recipe</a></button>
 
-                
+                    </main>
+                    
+                    
+                </body>
                 
             </div>
-        );
+
+            
+        )
     }
 }
 export default SingleRecipe;
-
-
-/*
-state = {
-        activeRecipe: []
-    }
-    
-    componentDidMount = async () => {
-        const title = this.props.location.state.recipe;
-        //const title = this.props.match.params.id;
-        //const request = await fetch (`https://forkify-api.herokuapp.com/api/v2/recipes?search=${title}=${apiKey}`)
-        const request = await fetch (`https://forkify-api.herokuapp.com/api/v2/recipes?search=${title}=
-        ${apiKey}`)
-        const respond = await request.json()
-        this.setState({ activeRecipe : respond.data.recipes[0]})
-        console.log(this.state.activeRecipe)
-    }
-    
-    render(){
-        const recipe = this.state.activeRecipe
-        return (
-            <div>
-                { this.state.activeRecipe.lenght !== 0 &&
-                    <div>
-                        <img src={recipe.image_url} alt={recipe.title}/>
-                        <h2>{recipe.title}</h2>
-                        <h3>{recipe.publisher}</h3>
-                        <button>
-                            <Link to="/">
-                                Go Home
-                            </Link>
-                        </button>
-                    </div>
-
-                }
-                
-            </div>
-        );
-    }
-*/
