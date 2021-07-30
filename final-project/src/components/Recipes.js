@@ -14,6 +14,7 @@ const Recipes = props => (
                     <h2 className="Recipes-headind-2">{recipe.recipe.label.length < 20 ? `${recipe.recipe.label}` : `${recipe.recipe.label.substring(0 , 25)}...`}</h2>
                     <img className="Recipes-image"src={recipe.recipe.image} alt={recipe.recipe.label}/>
                     <h3 className="Recipes-heading-3"><span>made by </span>{recipe.recipe.source}</h3>
+                    <p className="Recipe-Parragraph">cusine type: {recipe.recipe.cuisineType}</p>
                     <button className="Recipes-view-button">
                         <Link to={{
                         pathname : `/recipe/${getRecipeID}`, 
@@ -28,17 +29,3 @@ const Recipes = props => (
 )
 
 export default Recipes;
-
-/*
-<section key={recipe.recipe.shareAs}>
-                <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
-                <h2>{recipe.recipe.label.length < 20 ? `${recipe.recipe.label}` : `${recipe.recipe.label.substring(0 , 25)}...`}</h2>
-                <p>Publisher: <span>{recipe.recipe.source}</span></p>
-                <button>
-                    <Link to={{
-                        pathname : `/recipe/${recipe.recipe.shareAs}`, 
-                        state: {recipe: recipe.recipe.label}}}>View Recipe</Link>
-                </button>
-            </section>
-
-            */

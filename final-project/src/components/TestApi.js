@@ -42,9 +42,7 @@ class TestApi extends Component {
             
           </header>
           <body>
-            <p></p>
             <Recipes recipes={this.state.recipes}/>
-
           </body>
 
         </div>

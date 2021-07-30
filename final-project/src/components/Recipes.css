@@ -1,4 +1,4 @@
-.Recipes-main-container{
+.Recipes-main-container {
     width: auto;
     margin-top: 20px;
     display:grid;
@@ -23,7 +23,7 @@
     width: 350px;
 }
 
-.Recipes-heading-3{
+.Recipes-heading-3, .Recipe-Parragraph{
     text-align: center;
     text-transform: capitalize;
     

@@ -23,7 +23,6 @@ class SingleRecipe extends React.Component{
     render(){
         const recipe = this.state.activeRecipe
         
-        console.log(recipe.ingredientsLines)
         return (  
            
             <div>
