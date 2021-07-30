@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import Form from "./Form"
-import Recipes from "./Recipes"
+import Form from "../components/Form/Form"
+import Recipes from "../components/Recipes/Recipes"
 import "../TestApi.css"
 
 const apiKey = "14a8d176a5c51e6c3d76ac22f20630b3"
@@ -37,14 +37,11 @@ class TestApi extends Component {
         <div className="App">
           <header className="App-header">
             <h1>are you hungry? <span className="App-heading-part-2">find somenthing to cook</span></h1>
-            
             <Form getRecipe={this.getRecipe}/>
-            
           </header>
           <body>
             <Recipes recipes={this.state.recipes}/>
           </body>
-
         </div>
       );
   }

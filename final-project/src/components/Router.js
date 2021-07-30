@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import TestApi from "./TestApi"
-import SingleRecipe from "./SingleRecipe"
+import SingleRecipe from "../components/SingleRecipe/SingleRecipe"
 
 const Router = () => (
     
